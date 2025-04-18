@@ -1,0 +1,11 @@
+button{
+    margin-left: 16px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+    border-color: blue;
+}
+.counter {
+    margin-top: 5vh;
+}
