@@ -1,19 +1,23 @@
 import { use, useEffect, useLayoutEffect, useState } from "react";
 
-function timer() {
+function Timer() {
     const [time, setTime] = useState(new Date());
 
-useEffect(()=>{
-    first
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
 
-    return ()=>{
-        second
-    }
-}, [third])
+        return () => {
+            clearInterval(timer);
+        }
+    }, []); // Если действие должно работать в момент монтирования и каждого обновления (здесь не обязательно)  - не добавляем второй аргумент (массив) в useEffect . Если только в момент монтирования  - добавляем вторым аргументом пустой массив, если действие зависит от пропса, передаваемого в useEffect ( напр useEffect((info) => ) - добавляем в массив этот пропс
 
-    return (  
-        
+    return (
+        <div>
+            <p>Время: {time.toLocaleTimeString()}</p>
+        </div>
     );
 }
 
-export default timer;
+export default Timer;
