@@ -21,7 +21,9 @@ function CommentsList() {
         //         <button onClick={()=>delComment(comment.id)} >Удалить</button>
         //     </div >
         // </div>
-        <>
+        
+        // Фрагмент что бы не оборачивать в див:
+        <>  
             <div className="comment">
                 <p >
                     <span>{comment.id} </span>
