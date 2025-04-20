@@ -1,4 +1,4 @@
-import { use, useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Timer() {
     const [time, setTime] = useState(new Date());
