@@ -20,8 +20,8 @@ function TemperatureConverter() {
 
     const convert = () => {
         fahrenheit === '' ?
-            setFahrenheit(celsius * 9 / 5 + 32)
-            : setCelsius((fahrenheit - 32) * 5 / 9);
+            setFahrenheit((celsius * 9 / 5 + 32))
+            : setCelsius(((fahrenheit - 32) * 5 / 9));
     };
 
 
