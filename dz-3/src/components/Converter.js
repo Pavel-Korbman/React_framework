@@ -39,7 +39,7 @@ function TemperatureConverter() {
 
             <div>
                 <Stack spacing={2} direction="row">
-                    <Button variant="contained" onClick={() => convert()}>Перевести</Button>
+                    <Button variant="contained" onClick={() => convert()}>Конвертировать</Button>
                 </Stack>
             </div>
 

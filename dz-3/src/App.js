@@ -4,7 +4,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import './App.css';
-import TemperatureConverter from './Converter';
+import TemperatureConverter from './components/Converter';
+
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <header className="App-header">
        ДЗ 3
       </header>
-      <h3>1 задание:</h3>
+      <h3>Конвертер температуры:</h3>
       <TemperatureConverter/>
     </div>
   );
