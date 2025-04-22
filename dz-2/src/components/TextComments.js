@@ -12,17 +12,7 @@ function CommentsList() {
         setComments(array => array.filter(element => element.id !== id));
     }
 
-    return comments.map((comment) =>
-        // <div>
-        //     <div className="comment">
-        //         <p >
-        //             <span>{comment.id} </span>
-        //             {comment.text}</p>
-        //         <button onClick={()=>delComment(comment.id)} >Удалить</button>
-        //     </div >
-        // </div>
-        
-        // Фрагмент что бы не оборачивать в див:
+    return comments.map((comment) =>    
         <>  
             <div className="comment">
                 <p >

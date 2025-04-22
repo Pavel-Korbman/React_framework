@@ -5,7 +5,7 @@ import '@fontsource/roboto/700.css';
 
 import './App.css';
 import TemperatureConverter from './components/Converter';
-
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -15,6 +15,9 @@ function App() {
       </header>
       <h3>Конвертер температуры:</h3>
       <TemperatureConverter/>
+      <p></p>
+      <h3>Список дел:</h3>
+      <TodoList/>      
     </div>
   );
 }
