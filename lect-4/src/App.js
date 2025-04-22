@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        4 лекция
+        4 лекция Children
       </header>
       <div className='uni-block'>
         {console.log(
