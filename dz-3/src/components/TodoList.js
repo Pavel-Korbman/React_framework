@@ -9,6 +9,15 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+const bull = (
+    <Box
+      component="span"
+      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    >
+      •
+    </Box>
+  );
+
 
 function TodoList() {
     const [tasks, setTasks] = useState([]);
@@ -31,8 +40,8 @@ function TodoList() {
         }
     
         return tasks.map((task) =>
-            <Card sx={{ minWidth: 275 }} key={task.id}>
-                <CardContent>
+            <Card sx={{ minWidth: 275, maxWidth: 800 }} key={task.id}>
+                <CardContent >
                     <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>Дело {tasks.indexOf(task)+1}</Typography>
                     <Typography variant="body2">
                     {task.text}

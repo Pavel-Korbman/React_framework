@@ -39,3 +39,16 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+/* .cart-content{
+  display: flex;
+  max-width: 760px;
+  flex-direction: column;
+  align-items: flex-start;
+
+} */
+
+/* .task-text{
+  display: flex;
+  max-width: 760px !important;
+} */
