@@ -33,7 +33,7 @@ function TodoList() {
         return tasks.map((task) =>
             <Card sx={{ minWidth: 275 }} key={task.id}>
                 <CardContent>
-                    <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>Дело {task.id}</Typography>
+                    <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>Дело {tasks.indexOf(task)+1}</Typography>
                     <Typography variant="body2">
                     {task.text}
                     </Typography>
