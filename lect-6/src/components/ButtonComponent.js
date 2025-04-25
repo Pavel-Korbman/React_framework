@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { increment } from "../actions";
+import { increment } from "../reducers/counterSlice";
 
 const ButtonComponent = (props)=>{
     return(
