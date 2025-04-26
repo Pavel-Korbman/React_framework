@@ -1,6 +1,17 @@
+import React, { createContext, useState } from "react";
 
-const FilterContext =()=>{
+// Создаём контекст для фильтра
+export const FilterContext = createContext();
 
-}
+export const FilterProvider = ({ children }) => {
+    // Локальное состояние для хранения текущего фильтра
+    const [filter, setFilter] = useState('all');
 
-export default FilterContext;
+    return (
+        <FilterContext.Provider value={{ filter, setFilter }}>
+            {children}
+        </FilterContext.Provider>
+    );
+};
+
+
