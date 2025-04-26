@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTodo } from '../actions/todoActions';
 import { FilterContext } from '../contexts/FilterContext';
-import { withFilter } from "../hoc/withFilter";
+import withFilter from '../hoc/withFilter';
 
 const TodoList = () => {
     // Получаем список задач из Redux хранилища

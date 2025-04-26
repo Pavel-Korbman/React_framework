@@ -11,4 +11,4 @@ const withFilter = (todos, filter) => {
     }
 };
 
-export default withFilter ;
+export default withFilter;
