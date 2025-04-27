@@ -20,14 +20,8 @@ export const hideProduct = (id) => ({
     type: HIDE_PRODUCT,
     payload: { id }
 });
-
 // Изменение
-// export const editProduct = (name, description, prise, editMode) => ({
-//     type: EDIT_PRODUCT,  // Тип действия
-//     payload: { name, description, prise, editMode }  // Полезная нагрузка действия
-// });
-
-export const editProduct = (id, name, description, prise, editMode) => ({
+export const editProduct = (id, name, description, prise) => ({
     type: EDIT_PRODUCT,
-    payload: {id, name, description, prise, editMode }
+    payload: {id, name, description, prise }
 });

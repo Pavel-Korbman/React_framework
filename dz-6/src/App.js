@@ -1,12 +1,10 @@
 import './App.css';
 import React from 'react';
-
-
-
 import { Provider } from 'react-redux';
 import store from './store';
 import AddProduct from './components/AddProduct';
 import ProductList from './components/ProductList';
+import ProductEdit from './components/ProductEdit';
 
 function App() {
   return (
@@ -16,6 +14,7 @@ function App() {
       </header>
       <Provider store={store}>
         <AddProduct />
+        <ProductEdit/>
         <ProductList/>
       </Provider>
 

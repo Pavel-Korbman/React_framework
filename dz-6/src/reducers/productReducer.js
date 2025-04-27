@@ -2,46 +2,33 @@ import { ADD_PRODUCT, TOGGLE_PRODUCT, HIDE_PRODUCT, EDIT_PRODUCT } from '../acti
 
 const initialState = [];
 
-// Редюсер для обработки действий с продуктом
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_PRODUCT:
-            // Добавляем новый продукт
+        case ADD_PRODUCT:        
             return [...state, {
-                id: Date.now(),
+                id: `ID${Date.now()}`,
                 name: action.payload.name,
                 description: action.payload.description,
                 prise: action.payload.prise,
                 available: true,
-                visible: true,
-                editMode: false
+                visible: true                
             }];
-        case TOGGLE_PRODUCT:
-            // Изменяем доступность продукта
+        case TOGGLE_PRODUCT:           
             return state.map(product =>
                 product.id === action.payload.id ? { ...product, available: !product.available } : product
             );
-        case HIDE_PRODUCT:
-            // Изменяем видимость продукта
+        case HIDE_PRODUCT:           
             return state.map(product =>
                 product.id === action.payload.id ? { ...product, visible: false } : product
             );
-        case EDIT_PRODUCT:
-            // Изменяем продукт
+        case EDIT_PRODUCT:            
             return state.map(product =>
-                product.id === action.payload.id ? { ...product, 
+                product.id === action.payload.id ? {...product,
                     name: action.payload.name,
                     description: action.payload.description,
-                    prise: action.payload.prise,
-                    editMode: action.payload.editMode  
-                 } : product
-            );
-            // return [...state, {
-            //     name: action.payload.name,
-            //     description: action.payload.description,
-            //     prise: action.payload.prise,
-            //     editMode: action.payload.editMode                               
-            // }];
+                    prise: action.payload.prise                                      
+                } : product);            
+           
         default:
             return state;
     }

@@ -3,50 +3,61 @@ import { useDispatch } from "react-redux";
 import { editProduct } from "../actions/productActions";
 
 const ProductEdit = () => {
-    // Локальное состояние для нового продукта
+
+    const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
-    const [prise, setPrise] = useState('');
-    const [editMode, setEditMode] = useState(true);
-
+    const [prise, setPrise] = useState(''); 
+  
     const dispatch = useDispatch();
 
     const handleEditProduct = () => {
-        // Отправляем действие для изменения продукта
-        dispatch(editProduct(name, description, prise, editMode));
-        // setName('');
-        // setDescription('');
-        // setPrise('');
-        setEditMode(false);
+        if (id !== '' && name !== '' && description !== '' && prise !== '') {
+            dispatch(editProduct(id, name, description, prise));
+        }       
+        setName('');
+        setDescription('');
+        setPrise('');
     };
 
     return (
-        <div className="product-edit" style={{ display: editMode ? 'block' : 'none' }}>
+        <form className="product-edit">
             <h2>Изменить продукт</h2>
             <input
-                id="product-name"
+                id="id"
+                type="text"
+                value={id}
+                placeholder="id продукта"
+                required
+                onChange={(e) => setId(e.target.value)}
+            />
+            <input
+                id="new-name"
                 type="text"
                 value={name}
                 placeholder="Название продукта"
+                required
                 onChange={(e) => setName(e.target.value)}
             />
             <input
-                id="product-description"
+                id="new-description"
                 type="text"
                 value={description}
                 placeholder="Описание продукта"
+                required
                 onChange={(e) => setDescription(e.target.value)}
             />
             <input
-                id="product-prise"
+                id="new-prise"
                 type="text"
                 value={prise}
                 placeholder="Цена продукта"
+                required
                 onChange={(e) => setPrise(e.target.value)}
             />
-            <button onClick={handleEditProduct}>Сохранить</button>
+            <button onClick={handleEditProduct}>Сохранить</button>            
 
-        </div>
+        </form>
     );
 };
 
