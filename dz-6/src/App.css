@@ -12,3 +12,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.product{
+  border: 1px solid lightgrey;
+  width: 600px;
+  padding-bottom: 20px;
+}
+
+.product-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.description{
+  width: 560px;
+}
