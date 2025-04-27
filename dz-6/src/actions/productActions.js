@@ -27,7 +27,7 @@ export const hideProduct = (id) => ({
 //     payload: { name, description, prise, editMode }  // Полезная нагрузка действия
 // });
 
-export const editProduct = (id) => ({
+export const editProduct = (id, name, description, prise, editMode) => ({
     type: EDIT_PRODUCT,
-    payload: { id }
+    payload: {id, name, description, prise, editMode }
 });
