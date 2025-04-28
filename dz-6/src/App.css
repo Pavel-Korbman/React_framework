@@ -12,6 +12,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+input {
+  margin-right: 8px;
+}
+
 .product{
   border: 1px solid lightgrey;
   width: 600px;
@@ -24,6 +29,11 @@
   flex-direction: column;
   gap: 20px;
 }
+.text{
+ text-align: center; 
+}
+
 .description{
-  width: 560px;
+  
+  max-width: 560px;
 }

@@ -1,6 +1,8 @@
+import '../App.css';
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { hideProduct, toggleProduct } from '../actions/productActions';
+
 
 const ProductList = () => {
     const products = useSelector(state => state.products);
