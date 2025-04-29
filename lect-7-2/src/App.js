@@ -1,4 +1,9 @@
 import './App.css';
+import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import {store} from './store';
+import TaskList from './components/TaskList';
 
 function App() {
   return (
@@ -6,6 +11,9 @@ function App() {
       <header className="App-header">
        7 лекция. Redux middlewares. redux-saga
       </header>
+      <Provider store={store}>
+        <TaskList />
+      </Provider>
     </div>
   );
 }
