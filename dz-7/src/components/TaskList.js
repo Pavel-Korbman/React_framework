@@ -7,7 +7,7 @@ function TaskList() {
     const dispatch = useDispatch();
 
     const load = () => {
-        dispatch(loadTasks());
+       dispatch(loadTasks());
     };
 
     return (

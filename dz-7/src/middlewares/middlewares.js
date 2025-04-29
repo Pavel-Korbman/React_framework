@@ -1,11 +1,5 @@
-
-
-export const middleware1 = (store) => (next) => (action) => {
-    
-    
-    setTimeout(() => {
-        console.log('Работа мидлвара 1');
+export const middleware1 = (store) => (next) => (action) => {    
+    setTimeout(() => {        
         return next(action);        
-    }, 1500);
-    
+    }, 1500);    
 };

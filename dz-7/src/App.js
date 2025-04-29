@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       7 лекция. Redux middlewares. redux-saga
+       7 дз
       </header>
       <Provider store={store}>
         <TaskList />
