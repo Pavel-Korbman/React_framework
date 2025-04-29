@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { loadTasks } from "../actions/actions";
+import { loadTasks, loadTasksTimeout } from "../actions/actions";
 
 function TaskList() {
     const tasksList = useSelector(state => state.loadTasks);
@@ -8,6 +8,7 @@ function TaskList() {
 
     const load = () => {
        dispatch(loadTasks());
+       dispatch(loadTasksTimeout());
     };
 
     return (

@@ -6,11 +6,11 @@ export const loadTasks = () =>  ({
     type: LOAD_TASKS     
 });
 
-// export const loadTasks = createAsyncThunk(
-//     'LOAD_TASKS',
-//     async () => {
-//         setTimeout(() => {
-//             return {type: LOAD_TASKS };
-//         }, 2000);
-//     }
-// );
+export const loadTasksTimeout = createAsyncThunk(
+    'LOAD_TASKS',
+    async () => {
+        setTimeout(() => {
+            console.log('Иммитация загрузки');            
+        }, 1000);
+    }
+);
