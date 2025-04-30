@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import Header from "../Header";
 
 const HomePage = () => (
-    <div className="pages">
+    <div>
+        <Header/>
+        
         <Link to={"/catalog"}>Каталог</Link>
         <Link to={"/card"}>Корзина</Link>
         <Link to={"/product"}>Продукт</Link>
