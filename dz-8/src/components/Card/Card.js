@@ -7,8 +7,7 @@ import TopHeadCard from "./TopHeadCard";
 const Card = () => (
     <div className="pages">
         <Header />
-        <TopHeadCard />
-        <Link to={'/'}>Главная страница</Link>
+        <TopHeadCard />        
 
         <Subscribe />
         <Footer />

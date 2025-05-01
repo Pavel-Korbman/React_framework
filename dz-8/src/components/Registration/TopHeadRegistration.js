@@ -1,8 +1,8 @@
 
 function TopHeadRegistration() {
     return (
-        <div class="top-head">
-            <h2 class="top-head-heading center">REGISTRATION</h2>
+        <div className="top-head">
+            <h2 className="top-head-heading center">REGISTRATION</h2>
         </div>
     );
 }

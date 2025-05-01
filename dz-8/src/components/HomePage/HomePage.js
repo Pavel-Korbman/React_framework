@@ -5,6 +5,8 @@ import Subscribe from "../Subscribe";
 import TitleBlock from "./TitleBlock";
 import PromoBlock from "../PromoBlock";
 import Goods from "./GoodsTop";
+import Good from "../Good";
+import goods from "../../data/goods";
 
 
 const HomePage = () => (

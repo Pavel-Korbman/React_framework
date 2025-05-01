@@ -6,13 +6,12 @@ import TopHead from "../TopHead";
 import SelectionPanel from "./SelectionPanel";
 import GoodsNew from "./GoodsNew";
 
-
 const Catalog = () => (
     <div className="pages">
         <Header />
         <TopHead />
         <SelectionPanel />
-        <GoodsNew />
+        <GoodsNew />       
         <PromoBlock />
         <Subscribe />
         <Footer />
