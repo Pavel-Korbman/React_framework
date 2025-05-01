@@ -6,8 +6,8 @@ function RegistrationForm() {
             <form class="registration-form">
 
                 <h3 class="registration-form__title">Your Name</h3>
-                <input type="text" class="registration-form__input" value="First Name"></input>
-                <input type="text" class="registration-form__input" value="Last Name"></input>
+                <input type="text" class="registration-form__input" placeholder="First Name"></input>
+                <input type="text" class="registration-form__input" placeholder="Last Name"></input>
 
                 <div class="registration-form__radio">
                     <input type="radio" id="radio1" name="radio"></input>
@@ -19,8 +19,8 @@ function RegistrationForm() {
 
 
                 <h3 class="registration-form__title">Login details</h3>
-                <input type="text" class="registration-form__input" value="Email"></input>
-                <input type="text" class="registration-form__input" value="Password"></input>
+                <input type="email" class="registration-form__input" placeholder="Email"></input>
+                <input type="text" class="registration-form__input" placeholder="Password"></input>
 
                 <button class="registration-form__button">JOIN NOW
                     <svg class="registration-form__icon" width="17" height="10" viewBox="0 0 17 10" fill="none"
