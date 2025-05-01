@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import Subscribe from "../Subscribe";
 import TitleBlock from "./TitleBlock";
 import PromoBlock from "../PromoBlock";
+import Goods from "./GoodsTop";
 
 
 const HomePage = () => (
@@ -14,7 +15,7 @@ const HomePage = () => (
         <Link to={"/product"}>Продукт</Link>
         <Link to={"/registration"}>Регистрация</Link>
         <TitleBlock />
-
+        <Goods />
         <PromoBlock />
         <Subscribe />
         <Footer />
