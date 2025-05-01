@@ -1,0 +1,39 @@
+@mixin goodsGreed() {
+    display: grid;
+    grid-template-columns: repeat(3, $thirdWidthSite);    
+    gap: $gapGreed;
+    justify-content: center;
+}
+
+@mixin redButtonHoover() {
+    background-color: $witeBack;
+    color: $colorSelectSite;
+}
+
+@mixin whiteButtonHoover() {
+    color: $colorSelectSite;
+    border-color: $colorSelectSite;
+}
+
+
+@mixin goodsItemsFlex() {
+    display: flex;
+    gap: 10px;
+    color: #575757;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+@mixin cardButton() {
+    font-weight: 300;
+    font-size: 14px;
+    color: $blackText;
+    border: 1px solid #A4A4A4;
+    padding: 20px 40px;
+}
+
+@mixin infoText() {
+    font-weight: 300;
+    font-size: 24px;
+    color: $blackText;
+}

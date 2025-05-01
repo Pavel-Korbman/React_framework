@@ -1,10 +1,47 @@
 @import 'vars';
+@import 'mixins';
 @import 'header';
 @import 'footer';
+@import 'catalog';
+@import 'registration';
 
-// @import 'mixins';
 
 
+
+summary:hover {
+    color: $colorSelectSite;
+}
+
+.top-head {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #F8F3F4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-head-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $colorSelectSite;
+}
+
+.bread-crumbs__link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+}
+
+.bread-crumbs__link__site {
+    font-weight: 700;
+    color: $colorSelectSite;
+}
 
 .title__block {
     /* margin-top: 75px; */
@@ -331,6 +368,13 @@ h4 {
     .title__block {
         height: 363px;
         width: 100vw;
+    }
+
+    .top-head {
+        padding-top: 24px;
+        padding-bottom: 46px;
+        flex-direction: column;
+        gap: 32px;
     }
 
     .type__block {

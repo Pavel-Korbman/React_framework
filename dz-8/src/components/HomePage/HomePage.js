@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom";
 import Header from "../Header";
+import Footer from "../Footer";
+import Subscribe from "../Subscribe";
+import TitleBlock from "./TitleBlock";
+import PromoBlock from "../PromoBlock";
+
 
 const HomePage = () => (
     <div>
-        <Header/>
-        
+        <Header />
         <Link to={"/catalog"}>Каталог</Link>
         <Link to={"/card"}>Корзина</Link>
         <Link to={"/product"}>Продукт</Link>
         <Link to={"/registration"}>Регистрация</Link>
-        <h2>Главная страница</h2>
-        
+        <TitleBlock />
+
+        <PromoBlock />
+        <Subscribe />
+        <Footer />
     </div>
 )
 export default HomePage;

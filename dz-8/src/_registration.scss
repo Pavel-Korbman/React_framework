@@ -1,0 +1,153 @@
+@import 'mixins';
+@import 'vars';
+
+.registration-box {
+    margin-top: 68px;
+    margin-bottom: 128px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.registration-form {
+    width: $columnSite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        font-weight: 300;
+        font-size: 16px;
+        color: $backBlock;
+    }
+
+    &__input {
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        padding-left: 18px;
+        padding-right: 18px;
+        outline: none;
+        font-weight: 400;
+        font-size: 13px;
+        color: #b1b1b1;
+
+    }
+
+    &__input:focus {
+        color: #b1b1b1;
+    }
+
+    &__radio {
+        display: flex;
+        gap: 10px;
+        height: 17px;
+        font-weight: 300;
+        font-size: 11px;
+        color: $blackText;
+        margin-right: 20px;
+
+        &_hover:hover {
+            color: $colorSelectSite;
+        }
+    }
+
+    &__button {
+        height: 50px;
+        width: 167px;
+        background-color: $colorSelectSite;
+        font-weight: 400;
+        font-size: 14px;
+        color: $witeBack;
+        border: 1px solid $colorSelectSite;
+    }
+
+    &__icon {
+        padding-left: 16px;
+    }
+
+}
+
+.registration-form__button {
+
+    background-color: $colorSelectSite;
+    font-weight: 400;
+    font-size: 14px;
+    color: $witeBack;
+    border: 1px solid $colorSelectSite;
+}
+
+.registration-form__button:hover { 
+
+    @include redButtonHoover();   
+
+}
+
+.loyalty-benefit {
+    max-width: 652px;
+
+    &__title {
+        @include infoText();
+        padding-bottom: $gapGreed;
+    }
+
+    &__text {
+        @include infoText();
+        padding-bottom: $gapGreed;
+    }
+
+    &__points {
+        @include infoText();
+        list-style-image: url('./img/marker.svg');
+        padding-left: 26px;
+    }
+
+    &__point {
+
+        padding-left: 18px;
+    }
+}
+
+.mobyle__on {
+    display: none;
+}
+
+@media (max-width: 1140px) {
+
+    .registration-box {
+        margin-top: 44px;
+        margin-bottom: 96px;
+    }
+    
+    .loyalty-benefit {
+        width: 354px;
+
+        &__title {
+            font-size: 1rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+
+        &__points {
+            font-size: 1rem;
+
+        }
+    }
+}
+
+@media (max-width: 736px) {
+    
+    .registration-box {
+        margin-top: 40px;              
+        justify-content: center;        
+    }
+
+    .registration-form {
+       margin-bottom: 40px;
+    }
+}
