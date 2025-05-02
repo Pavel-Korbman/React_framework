@@ -1,0 +1,378 @@
+@import 'mixins';
+@import 'vars';
+
+.card-box {
+    margin-bottom: 128px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+}
+
+.product-box-card {
+    width: $cardProductWidth;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.product-card {
+    display: flex;
+    
+    align-items: flex-start;
+    box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+
+    &__image {
+        height: 306px;
+    }
+
+    &__content {
+        margin-left: 32px;
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    &__name {
+        width: 260px;
+        color: $backBlock;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 37px;
+    }
+
+    &__prise {
+        @include goodsItemsFlex();
+
+        &__item {
+            color: $colorSelectSite;
+        }
+    }
+
+    &__color {
+        @include goodsItemsFlex();
+
+        &__item {
+            color: $grayText;
+        }
+    }
+
+    &__size {
+        @include goodsItemsFlex();
+
+        &__item {
+            color: $grayText;
+        }
+    }
+
+    &__quantity {
+        @include goodsItemsFlex();
+
+        &__item {
+            width: 44px;
+            height: 24px;
+            border: 1px solid #EAEAEA;
+            color: $grayText;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        &__item:hover {
+            outline: 1px solid $colorSelectSite;
+        }
+
+        &__item:focus {
+            outline: 1px solid #EAEAEA;
+        }
+    }
+
+    &__close-icon {
+        // display: inline;
+        margin-top: 33px;
+        margin-left: 52px;
+    }
+
+    &__close-icon:hover {
+        path {
+            fill: $colorSelectSite
+        }
+    }
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 33px;
+}
+
+.clear-btn {
+    @include cardButton();
+}
+
+.clear-btn:hover {
+    @include whiteButtonHoover();
+}
+
+.continue-btn {
+    @include cardButton();
+}
+
+.continue-btn:hover {
+    @include whiteButtonHoover();
+}
+
+.order-box {
+    width: $thirdWidthSite;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.order__adress {
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        font-weight: 300;
+        font-size: 16px;
+        color: $backBlock;
+    }
+
+    &__input {
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        padding-left: 18px;
+        padding-right: 18px;
+        outline: none;
+        font-weight: 400;
+        font-size: 13px;
+        color: $backBlock;
+
+    }
+
+    &__input:focus {
+        color: #b1b1b1;
+    }
+
+    &__button {
+        border: 1px solid #A4A4A4;
+        height: 35px;
+        width: 102px;
+        font-weight: 400;
+        font-size: 11px;
+        color: #4a4a4a;
+        background-color: $witeBack;
+    }
+
+    &__button:hover {
+        @include whiteButtonHoover();
+    }
+
+
+}
+
+.proceed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #F5F3F3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: right;
+}
+
+.proseed__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtotal {
+    margin-right: 34px;
+    font-weight: 400;
+    font-size: 11px;
+    color: #4a4a4a;
+    margin-bottom: 14px;
+
+    &__item {
+        margin-left: 26px;
+    }
+}
+
+.grandtotal {
+    margin-right: 37px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $backBlock;
+
+    &__item {
+        margin-left: 26px;
+        color: $colorSelectSite;
+        font-weight: 700;
+    }
+}
+
+.proseed__button {
+    padding: 15px 40px;
+    background-color: $colorSelectSite;
+    font-weight: 400;
+    font-size: 16px;
+    color: $witeBack;
+    border: 1px solid $colorSelectSite;
+}
+
+.proseed__button:hover {
+    @include redButtonHoover();
+
+}
+
+.mobyle__on {
+    display: none;
+}
+
+@media (max-width: 1140px) {   
+
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        margin-bottom: 70px;
+    }
+
+    .order-box {
+        width: 734px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .order__adress {
+        width: $columnSite;
+    }
+
+    .proceed {
+        width: $columnSite;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 736px) {
+.card-box {
+    margin-bottom: 100px;
+}    
+
+    .product-box-card {
+        max-width: 360px;
+        gap: 20px;
+    }
+
+    .product-card {
+        &__image {
+            height: 188px;
+        }
+
+        &__content {
+            margin-left: 14px;
+            margin-top: 14px;
+        }
+
+        &__name {
+            width: 140px;
+            font-size: 1rem;
+            margin-bottom: 26px;
+        }
+
+        &__prise {
+            font-size: 14px;
+        }
+
+        &__color {
+            font-size: 14px;
+        }
+
+        &__size {
+            font-size: 14px;
+        }
+
+        &__quantity {
+            font-size: 14px;
+
+            &__item {
+                width: 24px;
+                height: 15px;
+            }
+        }
+
+        &__close-icon {
+            width: 10px;
+            height: 10px;
+            margin-top: 18px;
+            margin-left: 16px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 38px;
+    }
+
+    .clear-btn {
+        @include cardButtonMobile();
+        
+    }
+
+    .continue-btn {
+        @include cardButtonMobile();
+    }
+
+    .order-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 374px) {
+    .product-box-card {
+        max-width: 320px;        
+    }
+
+    .product-card {
+        &__name {
+            width: 120px;
+            font-size: 14px;
+            margin-bottom: 26px;
+        }
+
+        &__close-icon {           
+            margin-top: 18px;
+            margin-left: 0px;
+        }
+    }
+
+    .order-box {
+        width: 320px;        
+    }
+
+    .order__adress {
+        width: 320px;        
+    }
+
+    .proceed {
+        width: 320px;
+    }
+}

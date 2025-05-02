@@ -37,3 +37,24 @@
     font-size: 24px;
     color: $blackText;
 }
+
+@mixin cardButton() {
+    font-weight: 300;
+    font-size: 14px;
+    color: $blackText;
+    border: 1px solid #A4A4A4;
+    padding: 20px 40px;
+    text-transform: uppercase;
+}
+
+@mixin cardButtonMobile() {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: none;
+    padding: 0;
+    height: 33px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
