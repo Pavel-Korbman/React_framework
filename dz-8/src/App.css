@@ -1138,7 +1138,11 @@ label {
   border: 1px solid #EAEAEA;
   color: #6f6e6e;
   text-align: center;
-  margin-left: 20px;
+}
+.product-card__quantity__button {
+  width: 24px;
+  color: #6f6e6e;
+  background-color: #EAEAEA;
 }
 .product-card__quantity__item:hover {
   outline: 1px solid #f16d7f;
@@ -1335,7 +1339,7 @@ label {
   .product-card__name {
     width: 140px;
     font-size: 1rem;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
   }
   .product-card__prise {
     font-size: 14px;
@@ -1394,15 +1398,15 @@ label {
   }
 }
 @media (max-width: 374px) {
-  .product-box-card {
+  .product-box- {
     max-width: 320px;
   }
-  .product-card__name {
+  .product__name {
     width: 120px;
     font-size: 14px;
     margin-bottom: 26px;
   }
-  .product-card__close-icon {
+  .product__close-icon {
     margin-top: 18px;
     margin-left: 0px;
   }

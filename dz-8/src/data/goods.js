@@ -7,7 +7,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_02',
@@ -17,7 +19,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_03',
@@ -27,7 +31,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: true,
-        inCard: true
+        inCard: true,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_04',
@@ -37,7 +43,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: true,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_05',
@@ -47,7 +55,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: false,
-        inCard: false
+        inCard: true,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_06',
@@ -57,7 +67,9 @@ const goods = [
         prise: 52,
         inTop: true,
         inProduct: true,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_07',
@@ -67,7 +79,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: true
+        inCard: true,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_08',
@@ -77,7 +91,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_09',
@@ -87,7 +103,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_10',
@@ -97,7 +115,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_11',
@@ -107,7 +127,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     },
     {
         id: 'ID_12',
@@ -117,7 +139,9 @@ const goods = [
         prise: 52,
         inTop: false,
         inProduct: false,
-        inCard: false
+        inCard: false,
+        size: 'S',
+        quantity: 1
     }
 ];
 export default goods;
