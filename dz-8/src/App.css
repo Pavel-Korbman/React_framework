@@ -509,6 +509,26 @@ li {
 }
 .selection-panel__selector__item__menu__punkt {
   margin-right: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./img/selector.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: baseline;
+}
+.selection-panel__selector__item__menu__punkt:checked::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #6f6e6e;
+  border-radius: 2px;
+  margin: 5px;
 }
 
 summary {
