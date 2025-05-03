@@ -2,12 +2,6 @@ import goods from "../../data/goods";
 import React, { useState } from "react";
 
 const items = goods.filter(item => item.inCard === true);
-
-// let quantityItems = [];
-// items.forEach(element => {   
-//     quantityItems = [...quantityItems, element.quantity];
-// });
-
 let quantityS = [];
 items.forEach(element => {
     quantityS = [...quantityS, element.quantity];
@@ -47,7 +41,7 @@ function CardContent() {
                                 <div className="product-card__name">{item.title}</div>
                             </a>
                             <div className="product-card__prise">Prise:
-                                <div className="product-card__prise__item">${item.prise}</div>
+                                <div className="product-card__prise__item">${item.prise.toFixed(2)}</div>
                             </div>
                             <div className="product-card__color">Color:
                                 <div className="product-card__color__item">Red</div>
@@ -92,9 +86,9 @@ function CardContent() {
 
                 <div className="proceed">
                     <div className="proseed__text">
-                        <div className="subtotal">SUB TOTAL <span className="subtotal__item">${totalPrise}</span>
+                        <div className="subtotal">SUB TOTAL <span className="subtotal__item">${totalPrise.toFixed(2)}</span>
                         </div>
-                        <div className="grandtotal">GRAND TOTAL <span className="grandtotal__item">${totalPrise}</span>
+                        <div className="grandtotal">GRAND TOTAL <span className="grandtotal__item">${totalPrise.toFixed(2)}</span>
                         </div>
                     </div>
 

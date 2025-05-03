@@ -9,7 +9,7 @@ function Good(props) {
             <div className="product__content">
                 <a href="#" className="product__name">{props.name}</a>
                 <p className="product__text">{props.text}</p>
-                <p className="product__prise">${props.prise}</p>
+                <p className="product__prise">${props.prise.toFixed(2)}</p>
             </div>
         </div>
     );
