@@ -1,18 +1,15 @@
-import '../../App.css';
 import Header from "../Header";
 
-
-function HomePage() {
-    return (
+function Lecturers() {
+    return ( 
         <div>
             <Header />
             <div className="pages center">
-                <h1>Главная страница</h1>
+                <h1>Преподаватели</h1>
             </div>
 
         </div>
-
-    );
+     );
 }
 
-export default HomePage;
+export default Lecturers;

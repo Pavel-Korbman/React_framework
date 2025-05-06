@@ -1,6 +1,13 @@
 import './App.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
+import Programs from './components/Programs/Programs';
+import Lecturers from './components/Lecturers/Lecturers'
+import Support from './components/Support/Support';
 
 function App() {
   return (
@@ -9,10 +16,10 @@ function App() {
         <Routes>
           <Route path="*" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/catalog" element={<Catalog />} />
-          <Route path="/card" element={<Card />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/registration" element={<Registration />} /> */}
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/lecturers" element={<Lecturers />} />
+          <Route path="/support" element={<Support />} />
+          {/* <Route path="/registration" element={<Registration />} /> */}
         </Routes>
       </Router>
     </div>

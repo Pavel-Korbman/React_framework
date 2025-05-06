@@ -1,0 +1,12 @@
+$colorSelectSite: #f16d7f;;
+$widthSite: 1440px;
+$backBlock: #222224;
+$blackText:#000;
+$grayText: #6f6e6e;
+$cardBack: #f8f8f8;
+$witeBack: #fff;
+$gapGreed: 30px;
+$columnSite: 360px;
+$thirdWidthSite: calc(($widthSite - $gapGreed * 2) / 3);
+$leftPadding: 18px;
+$cardProductWidth: calc($widthSite - $thirdWidthSite - 128px);
