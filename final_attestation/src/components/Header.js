@@ -16,8 +16,8 @@ import MenuItem from '@mui/material/MenuItem';
 import SchoolIcon from '@mui/icons-material/School';
 
 
-const pages = ['Программы обучения', 'Преподаватели', 'Поддержка'];
-const settings = ['Профиль', 'Выйти'];
+// const pages = ['Программы обучения', 'Преподаватели', 'Поддержка'];
+const settings = ['Профиль'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,7 +39,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <a href='/'>
@@ -61,8 +61,8 @@ function Header() {
               color: 'inherit',
               textDecoration: 'none',
             }}
-          >  {/* LOGO */}        
-          </Typography>  
+          >  {/* LOGO */}
+          </Typography>
 
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -195,11 +195,13 @@ function Header() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+              {/* <a href='/registration'> */}
+                <MenuItem key='Войти' onClick={handleCloseUserMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>Войти</Typography>
                 </MenuItem>
-              ))}
+              {/* </a> */}
+
+
             </Menu>
           </Box>
         </Toolbar>

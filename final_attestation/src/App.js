@@ -8,6 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 import Programs from './components/Programs/Programs';
 import Lecturers from './components/Lecturers/Lecturers'
 import Support from './components/Support/Support';
+import Lesson from './components/Lesson/Lesson';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/lecturers" element={<Lecturers />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/lesson" element={<Lesson />} />
           {/* <Route path="/registration" element={<Registration />} /> */}
         </Routes>
       </Router>
