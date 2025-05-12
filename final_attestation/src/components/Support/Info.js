@@ -11,8 +11,9 @@ function Info() {
                     Информация
                 </Typography>
                 <div className='box'>                    
-                    <Typography className='pages__title' variant="h6" gutterBottom>
-                        Блок правовой информации
+                    <Typography className='pages__title' variant="h7" gutterBottom>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                            malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
                 </div>
 

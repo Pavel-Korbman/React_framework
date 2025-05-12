@@ -13,9 +13,9 @@ function HomePage() {
                 <Typography className='pages__title' variant="h4" gutterBottom>
                     Познакомьтесь с основами программирования!
                 </Typography>
-                <Typography className='pages__title' variant="h6" gutterBottom>
+                <Typography className='pages__title' variant="body1" gutterBottom>
                     <div>ИТ-специалисты востребованы в финансах, ритейле, образовании и многих других отраслях.</div>
-                    <div>Экономика и повседневная жизнь все больше переходит в «цифру»,</div> поэтому у ИТ-сферы самые большие перспективы на развитие в ближайшем будущем.
+                    <div>Экономика и повседневная жизнь все больше переходит в «цифру»,</div> <div>поэтому у ИТ-сферы самые большие перспективы на развитие в ближайшем будущем.</div>
                 </Typography>
 
                 <div className='box'>                   

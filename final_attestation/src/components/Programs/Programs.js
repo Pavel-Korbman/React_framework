@@ -50,7 +50,7 @@ function Programs() {
                     Программы обучения
                 </Typography>
 
-                <div className='box__filter'>
+                <div className='box box__filter'>
                     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                         <InputLabel id="demo-select-small-label"><FilterListIcon/></InputLabel>
                         <Select

@@ -34,10 +34,12 @@ a {
     @include boxFlex();
     margin-bottom: 60px;
 
-    &__filter {
-        display: flex;
-        justify-content: center;
+    &__filter {        
         margin-bottom: 30px;
+    }
+
+    &__faq{
+        gap: 0;
     }
 }
 
