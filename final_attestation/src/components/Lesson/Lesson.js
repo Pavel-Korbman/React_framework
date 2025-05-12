@@ -10,38 +10,25 @@ import Button from '@mui/material/Button';
 
 function Lesson(props) {
 
-    let steps = [];   
+    let steps = [];
     props.steps.forEach(element => {
         steps = [...steps, element.title];
     });
 
-    let posters = [];   
+    let posters = [];
     props.steps.forEach(element => {
         posters = [...posters, element.posterLink];
     });
 
-    let videos = [];   
+    let videos = [];
     props.steps.forEach(element => {
         videos = [...videos, element.mediaLink];
     });
-    
 
     const [activeStep, setActiveStep] = React.useState(0);
-    // const [skipped, setSkipped] = React.useState(new Set());
-
-    // const isStepSkipped = (step) => {
-    //     return skipped.has(step);
-    // };
 
     const handleNext = () => {
-        // let newSkipped = skipped;
-        // if (isStepSkipped(activeStep)) {
-        //     newSkipped = new Set(newSkipped.values());
-        //     newSkipped.delete(activeStep);
-        // }
-
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        // setSkipped(newSkipped);
     };
 
     const handleBack = () => {
@@ -59,7 +46,7 @@ function Lesson(props) {
 
             <div className="pages center">
                 <Typography className='pages__title' variant="h4" gutterBottom>
-                    Frontend-разработка
+                    {props.headLine}
                 </Typography>
                 <div className='box'>
                     <Box sx={{ width: '100%' }}>
@@ -67,9 +54,6 @@ function Lesson(props) {
                             {steps.map((label, index) => {
                                 const stepProps = {};
                                 const labelProps = {};
-                                // if (isStepSkipped(index)) {
-                                //     stepProps.completed = false;
-                                // }
                                 return (
                                     <Step key={label} {...stepProps}>
                                         <StepLabel {...labelProps}>{label}</StepLabel>
@@ -93,7 +77,7 @@ function Lesson(props) {
                         ) : (
                             <React.Fragment>
 
-                                <div className="centerbox">
+                                <div className="center box">
                                     <video className="pleer" src={videos[activeStep]} poster={posters[activeStep]} controls></video>
                                 </div>
 
@@ -107,11 +91,7 @@ function Lesson(props) {
                                         Предыдущий
                                     </Button>
                                     <Box sx={{ flex: '1 1 auto' }} />
-                                    {/* {isStepOptional(activeStep) && (
-                                        <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                                            Skip
-                                        </Button>
-                                    )} */}
+
                                     <Button onClick={handleNext}>
                                         {activeStep === steps.length - 1 ? 'Завершить' : 'Следующий'}
                                     </Button>
@@ -121,12 +101,7 @@ function Lesson(props) {
                     </Box>
                 </div>
 
-
-
-
             </div>
-
-
 
         </div>
     );
