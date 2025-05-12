@@ -17,7 +17,7 @@ import SchoolIcon from '@mui/icons-material/School';
 
 
 // const pages = ['Программы обучения', 'Преподаватели', 'Поддержка'];
-const settings = ['Профиль'];
+// const settings = ['Профиль'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

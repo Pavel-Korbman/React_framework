@@ -8,47 +8,44 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 
-function Lesson() {
-    const steps = ['Урок 1', 'Урок 2', 'Урок 3'];
+function Lesson(props) {
+
+    let steps = [];   
+    props.steps.forEach(element => {
+        steps = [...steps, element.title];
+    });
+
+    let posters = [];   
+    props.steps.forEach(element => {
+        posters = [...posters, element.posterLink];
+    });
+
+    let videos = [];   
+    props.steps.forEach(element => {
+        videos = [...videos, element.mediaLink];
+    });
+    
+
     const [activeStep, setActiveStep] = React.useState(0);
-    const [skipped, setSkipped] = React.useState(new Set());
+    // const [skipped, setSkipped] = React.useState(new Set());
 
-    const isStepOptional = (step) => {
-        return step === 1;
-    };
-
-    const isStepSkipped = (step) => {
-        return skipped.has(step);
-    };
+    // const isStepSkipped = (step) => {
+    //     return skipped.has(step);
+    // };
 
     const handleNext = () => {
-        let newSkipped = skipped;
-        if (isStepSkipped(activeStep)) {
-            newSkipped = new Set(newSkipped.values());
-            newSkipped.delete(activeStep);
-        }
+        // let newSkipped = skipped;
+        // if (isStepSkipped(activeStep)) {
+        //     newSkipped = new Set(newSkipped.values());
+        //     newSkipped.delete(activeStep);
+        // }
 
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        setSkipped(newSkipped);
+        // setSkipped(newSkipped);
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-
-    const handleSkip = () => {
-        if (!isStepOptional(activeStep)) {
-            // You probably want to guard against something like this,
-            // it should never occur unless someone's actively trying to break something.
-            throw new Error("You can't skip a step that isn't optional.");
-        }
-
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        setSkipped((prevSkipped) => {
-            const newSkipped = new Set(prevSkipped.values());
-            newSkipped.add(activeStep);
-            return newSkipped;
-        });
     };
 
     const handleReset = () => {
@@ -59,6 +56,7 @@ function Lesson() {
     return (
         <div>
             <Header />
+
             <div className="pages center">
                 <Typography className='pages__title' variant="h4" gutterBottom>
                     Frontend-разработка
@@ -69,14 +67,9 @@ function Lesson() {
                             {steps.map((label, index) => {
                                 const stepProps = {};
                                 const labelProps = {};
-                                // if (isStepOptional(index)) {
-                                //     labelProps.optional = (
-                                //         <Typography variant="caption">Optional</Typography>
-                                //     );
+                                // if (isStepSkipped(index)) {
+                                //     stepProps.completed = false;
                                 // }
-                                if (isStepSkipped(index)) {
-                                    stepProps.completed = false;
-                                }
                                 return (
                                     <Step key={label} {...stepProps}>
                                         <StepLabel {...labelProps}>{label}</StepLabel>
@@ -100,14 +93,9 @@ function Lesson() {
                         ) : (
                             <React.Fragment>
 
-
-                                {/* <Typography sx={{ mt: 2, mb: 1 }}>Урок {activeStep + 1}</Typography> */}
-                                {/* <h3 className="pleer">ЗДЕСЬ ПЛЕЕР {activeStep + 1}</h3> */}
                                 <div className="centerbox">
-                                    <video className="pleer" src="video.mp4" poster={require("../../media/poster.jpg")} controls></video>
+                                    <video className="pleer" src={videos[activeStep]} poster={posters[activeStep]} controls></video>
                                 </div>
-
-
 
                                 <Box className='center btn_step' sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                                     <Button
@@ -137,6 +125,8 @@ function Lesson() {
 
 
             </div>
+
+
 
         </div>
     );

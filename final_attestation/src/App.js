@@ -9,21 +9,25 @@ import Programs from './components/Programs/Programs';
 import Lecturers from './components/Lecturers/Lecturers'
 import Support from './components/Support/Support';
 import Lesson from './components/Lesson/Lesson';
+import { Provider } from 'react-redux';
+import store from './store';
 
 function App() {
   return (
     <div className="App">
- <Router>
-        <Routes>
-          <Route path="*" element={<HomePage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/lecturers" element={<Lecturers />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/lesson" element={<Lesson />} />
-          {/* <Route path="/registration" element={<Registration />} /> */}
-        </Routes>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Routes>
+            <Route path="*" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/lecturers" element={<Lecturers />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/lesson" element={<Lesson />} />
+            {/* <Route path="/registration" element={<Registration />} /> */}
+          </Routes>
+        </Router>
+      </Provider>
     </div>
   );
 }
