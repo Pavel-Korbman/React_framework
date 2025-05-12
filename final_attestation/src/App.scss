@@ -28,12 +28,20 @@ a {
     }
 }
 
-.box{
+.box {
     @include boxFlex();
     margin-bottom: 60px;
+
+    &__filter {        
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
 }
 
-.centerbox{
+
+
+.centerbox {
     // max-width: 80vw;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -42,7 +50,7 @@ a {
     align-items: center;
 }
 
-.pleer{
+.pleer {
     width: 60vw;
 }
 
@@ -51,14 +59,14 @@ a {
     .center {
         padding-left: calc(50vw - 600px);
         padding-right: calc(50vw - 600px);
-    } 
-    
-    .btn_step{
+    }
+
+    .btn_step {
         padding-left: 140px;
         padding-right: 140px;
     }
 
-    .pleer{
+    .pleer {
         width: 90vw;
     }
 
@@ -70,12 +78,12 @@ a {
         padding-right: 8px;
     }
 
-    .btn_step{
+    .btn_step {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .pleer{
+    .pleer {
         width: 100vw;
     }
 

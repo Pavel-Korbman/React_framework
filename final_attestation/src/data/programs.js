@@ -6,6 +6,7 @@ const programs = [
         photoLink: require('../img/front.jpg'),
         inTop: true,
         inProgram: false,
+        type: 'programming',
         lessons: [
             {
                 id: 'ID_01_01',
@@ -34,6 +35,7 @@ const programs = [
         photoLink: require("../img/python.jpg"),
         inTop: true,
         inProgram: false,
+        type: 'programming',
         lessons: [
             {
                 id: 'ID_02_01',
@@ -62,6 +64,7 @@ const programs = [
         photoLink: require("../img/ux.jpg"),
         inTop: true,
         inProgram: false,
+        type: 'design',
         lessons: [
             {
                 id: 'ID_03_01',
@@ -90,6 +93,7 @@ const programs = [
         photoLink: require("../img/java.jpg"),
         inTop: true,
         inProgram: false,
+        type: 'programming',
         lessons: [
             {
                 id: 'ID_04_01',
@@ -118,6 +122,7 @@ const programs = [
         photoLink: require("../img/machine_learning.jpg"),
         inTop: true,
         inProgram: false,
+        type: 'programming',
         lessons: [
             {
                 id: 'ID_05_01',
@@ -146,6 +151,7 @@ const programs = [
         photoLink: require("../img/unity.jpg"),
         inTop: true,
         inProgram: false,
+        type: 'programming',
         lessons: [
             {
                 id: 'ID_06_01',
