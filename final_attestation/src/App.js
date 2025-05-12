@@ -8,6 +8,8 @@ import HomePage from './components/HomePage/HomePage';
 import Programs from './components/Programs/Programs';
 import Lecturers from './components/Lecturers/Lecturers'
 import Support from './components/Support/Support';
+import Info from './components/Support/Info';
+
 import Lesson from './components/Lesson/Lesson';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -24,7 +26,7 @@ function App() {
             <Route path="/lecturers" element={<Lecturers />} />
             <Route path="/support" element={<Support />} />
             <Route path="/lesson" element={<Lesson />} />
-            {/* <Route path="/registration" element={<Registration />} /> */}
+            <Route path="/info" element={<Info />} />
           </Routes>
         </Router>
       </Provider>

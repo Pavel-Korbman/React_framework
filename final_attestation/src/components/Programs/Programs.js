@@ -10,6 +10,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Lesson from "../Lesson/Lesson";
+import Footer from "../Footer";
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 function Programs() {
     const dispatch = useDispatch();
@@ -50,7 +52,7 @@ function Programs() {
 
                 <div className='box__filter'>
                     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                        <InputLabel id="demo-select-small-label">фильтр</InputLabel>
+                        <InputLabel id="demo-select-small-label"><FilterListIcon/></InputLabel>
                         <Select
                             labelId="demo-select-small-label"
                             id="demo-select-small"
@@ -58,7 +60,7 @@ function Programs() {
                             label="Value"
                             onChange={handleChange}
                         >
-                            <MenuItem value=''>
+                            <MenuItem value='Все'>
                                 <em>Все</em>
                             </MenuItem>
                             <MenuItem value={10}>Программирование</MenuItem>
@@ -79,6 +81,7 @@ function Programs() {
             <div style={{ display: visibleLesson ? 'block' : 'none' }}>
                 <Lesson steps={lessons} headLine={headline} />
             </div>
+            <Footer/>
 
         </div>
     );
