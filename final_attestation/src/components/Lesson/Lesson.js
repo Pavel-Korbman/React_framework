@@ -63,7 +63,7 @@ function Lesson(props) {
                         </Stepper>
                         {activeStep === steps.length ? (
                             <React.Fragment>
-                                <div className="centerbox">
+                                <div className="lesson">
                                     <Typography sx={{ mt: 2, mb: 1 }}>
                                         Поздравляем - вы закончили курс!
                                     </Typography>
