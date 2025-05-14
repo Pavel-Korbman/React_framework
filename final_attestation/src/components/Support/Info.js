@@ -6,7 +6,7 @@ function Info() {
     return (
         <div>
             <Header />
-            <div className="pages center">
+            <div className="pages center box__faq">
                 <Typography className='pages__title' variant="h4" gutterBottom>
                     Информация
                 </Typography>
