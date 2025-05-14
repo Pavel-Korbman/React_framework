@@ -112,6 +112,8 @@ a {
 }
 .box__faq {
   gap: 0;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .pleer {
